@@ -6,9 +6,21 @@ $(function(){
     console.log(students)
   })
   
+  $("#button01").on("click",function(){
+    let txt = ""
+    for(let i=0; i<students.length; i++){
+      txt += students[i]
+    }
+    $("#content").text(txt);
+  })
 
-
-
+  $("#button02").on("click",function(){
+    let txt = ""
+    for(let i=0; i<students.length; i++){
+      txt += "<div id='student" + i + "' class='student'>" + students[i] +"</div>"
+    }
+    $("#content").html(txt);
+  })
 
 
 })
